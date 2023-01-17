@@ -1,0 +1,29 @@
+version: '3.9'
+services:
+        db:
+                build:
+                        context: db
+                        dockerfile: Dockerfile
+                networks:
+                        backend_connection:
+                                ipv4_address: 172.60.0.3
+        ispindel:
+                build:
+                        context: ispindel
+                        dockerfile: Dockerfile
+                ports:
+                        - 80:80
+                        - 443:443
+                networks:
+                        backend_connection:
+                                ipv4_address: 172.60.0.4
+networks:
+        frontend_connection:
+                name: frontend_connection
+                driver: bridge
+        backend_connection:
+                ipam:
+                        driver: default
+                        config:
+                                - subnet: "172.60.0.0/24"
+                                  gateway: "172.60.0.1"
