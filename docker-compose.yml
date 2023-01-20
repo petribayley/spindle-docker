@@ -4,6 +4,8 @@ services:
                 build:
                         context: db
                         dockerfile: Dockerfile
+                ports:
+                                - 3306:3306
                 networks:
                         backend_connection:
                                 ipv4_address: 172.60.0.3
@@ -14,6 +16,7 @@ services:
                 ports:
                         - 80:80
                         - 443:443
+                        - 9501:9501
                 networks:
                         backend_connection:
                                 ipv4_address: 172.60.0.4
