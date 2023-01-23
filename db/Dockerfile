@@ -1,1 +1,13 @@
-FROM mariadb:10
+FROM mariadb:latest
+
+EXPOSE 3306
+
+LABEL version="1.0"
+LABEL description="MariaDB Server"
+
+ENV MYSQL_ROOT_PASSWORD=Password123!
+ENV MYSQL_DATABASE=iSpindel
+ENV MYSQL_USER=iSpindel
+ENV MYSQL_PASSWORD=ohyeah
+ENV DATABASE_MODE=IGNORE
+
