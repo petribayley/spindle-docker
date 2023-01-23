@@ -3,4 +3,4 @@
 whoami
 
 apachectl start &
-/bin/python3 /usr/local/bin/iSpindle.py
+sudo -u ispindel /bin/python3 /usr/local/bin/iSpindle.py 
