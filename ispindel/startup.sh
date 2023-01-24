@@ -2,5 +2,5 @@
 
 whoami
 
-apachectl start &
-sudo -u ispindel /bin/python3 /usr/local/bin/iSpindle.py 
+apachectl -D FOREGROUND & \
+/bin/python3 /var/www/html/iSpindel/iSpindle.py 
