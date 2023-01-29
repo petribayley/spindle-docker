@@ -7,3 +7,6 @@ LABEL description="MariaDB Server"
 
 ENV DATABASE_MODE=IGNORE
 
+# ADD iSpindel_DB.sql /docker-entrypoint-initdb.d
+# RUN echo "GRANT ALL PRIVILEGES ON *.* TO iSpindel;" > my_grants.sql
+

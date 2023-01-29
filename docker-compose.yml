@@ -6,11 +6,11 @@ services:
                         dockerfile: Dockerfile
                 environment:
                         MYSQL_ROOT_PASSWORD: Password123!
-                        MYSQL_DATABASE: iSpindel
-                        MYSQL_USER: iSpindel
+                        #MYSQL_DATABASE: iSpindel
+                        #MYSQL_USER: iSpindel
                         MYSQL_PASSWORD: ohyeah
                 ports:
-                                - 3306:3306
+                        - 3306:3306
                 networks:
                         backend_connection:
                                 ipv4_address: 172.60.0.3
